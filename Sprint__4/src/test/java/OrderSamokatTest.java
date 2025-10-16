@@ -52,7 +52,7 @@ public class OrderSamokatTest extends BestTests {
 
         orderPage.dataOder("15.10.2025");
         orderPage.rentalPeriod("сутки");
-        orderPage.ChooseСolor();
+        orderPage.chooseСolor();
         orderPage.commentForCourier("Привет, друг!");
         orderPage.buttonOrder();
         orderPage.yesButtonOrder();

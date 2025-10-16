@@ -26,10 +26,10 @@ public class OrderPage {
     private By dataField = By.cssSelector("input[placeholder='* Когда привезти самокат']");
     private By rentalPeriodLocator = By.className("Dropdown-arrow");
     private String rentPeriodChoose = ".//div[text()='%s']";
-    ;
+
     private By colorButton = By.id("black");
-    private By commentForCourierLocator = By.xpath("//input[@placeholder='Комментарий для курьера']");
-    private By buttonOrderLocator = By.xpath("//*[@id=\"root\"]/div/div[2]/div[3]/button[2]");
+    private By commentForCourierLocator = By.xpath(".//input[@*='Комментарий для курьера']");
+    private By buttonOrderLocator = By.xpath("//button[@class='Button_Button__ra12g Button_Middle__1CSJM' and contains(text(), 'Заказать')]");
     private By yesButton = By.xpath("//button[text() = 'Да']");
     private By orderHasBeenPlacedText = By.className("Order_ModalHeader__3FDaJ");
 
@@ -84,7 +84,7 @@ public class OrderPage {
         driver.findElement(By.xpath(String.format(rentPeriodChoose, rentTime))).click();
     }
 
-    public void ChooseСolor() {
+    public void chooseСolor() {
         driver.findElement(colorButton).click();
 
     }
